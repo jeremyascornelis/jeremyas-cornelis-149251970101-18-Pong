@@ -33,11 +33,13 @@ public class PaddleController : MonoBehaviour
             //gerakan ke bawah
             return Vector2.down * speed;
         }
-
+        Debug.Log("Paddle Speed: " + speed);
         return Vector2.zero;
+        
     }
 
     private void MoveObject(Vector2 movement) {
+        
         rig.velocity = movement;
     }
 }
