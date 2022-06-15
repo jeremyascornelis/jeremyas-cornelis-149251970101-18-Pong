@@ -8,11 +8,9 @@ public class BallController : MonoBehaviour
     public Vector2 resetPosition;
 
     private Rigidbody2D rig;
-<<<<<<< Updated upstream
-=======
+
 
     private float timer;
->>>>>>> Stashed changes
     
     private void Start() {
         rig = GetComponent<Rigidbody2D>();
@@ -21,15 +19,12 @@ public class BallController : MonoBehaviour
 
     public void ResetBall() {
         transform.position = new Vector3(resetPosition.x, resetPosition.y, 2);
-<<<<<<< Updated upstream
-=======
         rig.velocity = speed;
     }
 
     public void ActivatePUSpeedUP(float magnitude) {
         //menambah speed sesuai inputan
         rig.velocity *= magnitude;
->>>>>>> Stashed changes
     }
 
 
