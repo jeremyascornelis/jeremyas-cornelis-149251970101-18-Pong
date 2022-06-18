@@ -11,10 +11,14 @@ public class ScoreManager : MonoBehaviour
     public int maxScore;
 
     public BallController ball;
+    public PaddleController padelKanan;
+    public PaddleController padelKiri;
 
     public void AddRightScore(int increment) {
         rightScore += increment;
         ball.ResetBall();
+        padelKanan.resetPad();
+        padelKiri.resetPad();
 
         if(rightScore >= maxScore) {
             GameOver();
@@ -24,6 +28,8 @@ public class ScoreManager : MonoBehaviour
     public void AddLeftScore(int increment) {
         leftScore += increment;
         ball.ResetBall();
+        padelKanan.resetPad();
+        padelKiri.resetPad();
 
         if(leftScore >= maxScore) {
             GameOver();
@@ -33,4 +39,5 @@ public class ScoreManager : MonoBehaviour
     public void GameOver() {
         SceneManager.LoadScene("Main Menu");
     }
+
 }

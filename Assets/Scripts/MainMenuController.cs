@@ -12,4 +12,8 @@ public class MainMenuController : MonoBehaviour
     public void OpenAuthor() {
         Debug.Log("Created by Jeremyas Cornelis - 149251970101-18");
     }
+
+    public void Credit(){
+        SceneManager.LoadScene("Credit");
+    }
 }

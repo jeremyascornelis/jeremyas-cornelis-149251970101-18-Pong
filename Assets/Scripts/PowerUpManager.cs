@@ -30,6 +30,8 @@ public class PowerUpManager : MonoBehaviour
         if(timer > spawnInterval){
             if(powerUpList.Count == maxPowerUpAmount){
                 RemovePowerUp(powerUpList[0]);
+                RemovePowerUp(powerUpList[1]);
+                RemovePowerUp(powerUpList[2]);
             }
             GenerateRandomPowerUp();
             timer -= spawnInterval;
@@ -65,6 +67,8 @@ public class PowerUpManager : MonoBehaviour
         while (powerUpList.Count > 0)
         {
             RemovePowerUp(powerUpList[0]);
+            RemovePowerUp(powerUpList[1]);
+            RemovePowerUp(powerUpList[2]);
         }
     }
 }
